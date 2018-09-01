@@ -1,0 +1,80 @@
+<html>
+	<body>
+		<img class="fullBg" fullpage src="assets/home-background.jpg">
+
+		<div class="top">
+			 <owl-carousel
+			 [options]="{items: 1, dots: true, loop: true, center: true, nav: false, margin: 5, autoplay: true, autoplayTimeout: 4000, autoplayHoverPause: true}" 
+			 [items]="imagesurl"
+			 [carouselClasses]="['owl-theme', 'row', 'sliding']">
+				 <div class="item" *ngFor="let image of imagesurl;let i = index">
+					 <img src="{{image}}"/>
+				 </div>
+			 </owl-carousel>
+		</div>
+
+		<div class="cards" *ngIf="!(isHandset$ | async)">
+			<mat-card>
+				<mat-card-header>
+					<img mat-card-sm-image src="assets/question.png">
+				</mat-card-header>
+				
+				<mat-card-content>
+					<p> Hello! Welcome to my online website! Feel free to take a look around to discover more about me and what I do.</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card>
+				<mat-card-header>
+					<img mat-card-sm-image src="assets/user.png">
+				</mat-card-header>
+				
+				<mat-card-content>
+					<p> I am a Computer Engineering graduate from Penn State. I am really interested in technology, programming and design.</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card>
+				<mat-card-header>
+					<img mat-card-sm-image src="assets/star.png">
+				</mat-card-header>
+				
+				<mat-card-content>
+					<p> My goal is to work on software that positively and profoundly impacts society.</p>
+				</mat-card-content>
+			</mat-card>
+		</div>
+		
+		<div class="handcards" *ngIf="(isHandset$ | async)">
+			<mat-card>
+				<mat-card-header>
+					<img mat-card-sm-image src="assets/question.png">
+				</mat-card-header>
+				
+				<mat-card-content>
+					<p> Hello! Welcome to my online website! Feel free to take a look around to discover more about me and what I do.</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card>
+				<mat-card-header>
+					<img mat-card-sm-image src="assets/user.png">
+				</mat-card-header>
+				
+				<mat-card-content>
+					<p> I am a Computer Engineering graduate from Penn State. I am really interested in technology, programming and design.</p>
+				</mat-card-content>
+			</mat-card>
+
+			<mat-card>
+				<mat-card-header>
+					<img mat-card-sm-image src="assets/star.png">
+				</mat-card-header>
+				
+				<mat-card-content>
+					<p> My goal is to work on software that positively and profoundly impacts society.</p>
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</body>
+</html>

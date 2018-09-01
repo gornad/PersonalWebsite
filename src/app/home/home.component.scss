@@ -1,0 +1,65 @@
+:host {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.fullBg {
+    z-index:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.top {
+	width:38%;
+	height:100%;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 2%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6%;
+}
+
+.handcards {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card {
+    max-width:500px;
+	height:200px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    background: rgba(255,255,255,0.9);
+    overflow: hidden;
+}
+
+mat-card-header {
+    color: #3f51b5;
+}
+
+mat-card img {
+  object-fit: cover; /*this makes de image in src fit to the size of specified below*/
+  width: 10%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+mat-card-content {
+	font-family: 'Roboto', sans-serif;
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+	font-size:115%;
+	padding:20px;
+}
+
