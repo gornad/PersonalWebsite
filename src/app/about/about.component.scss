@@ -4,15 +4,15 @@
 	padding: 4%;
 }
 
-.hor{
+.orientation{
 	display: flex;
 	flex-direction: row;
 }
 
 img {
 	margin-top: 7%;
-	width: 30%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
-	height: 30%;
+	width: 24vw; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+	height: 16vw;
 	margin-left: auto;
 	margin-right: auto;
 	image-orientation: from-image;
@@ -20,4 +20,21 @@ img {
 
 html {
 	background-color: white;
+}
+
+@media screen and (max-width: 1500px) {
+	img {
+		width: 30vw; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+		height: 20vw;
+	}
+}
+  
+@media screen and (max-width: 1200px) {
+	.orientation  {
+	  flex-direction: column;
+	}
+	img {
+		width: 45vw; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+		height: 30vw;
+	}
 }
