@@ -6,11 +6,11 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-blueprint-nav',
   templateUrl: './blueprint-nav.component.html',
-  styleUrls: ['./blueprint-nav.component.css']
+  styleUrls: ['./blueprint-nav.component.scss']
 })
 export class BlueprintNavComponent {
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet, Breakpoints.Small])
     .pipe(
       map(result => result.matches)
     );

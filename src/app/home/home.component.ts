@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   
   public imagesurl;
   
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe([Breakpoints.Handset, Breakpoints.Tablet, Breakpoints.Small])
     .pipe(
       map(result => result.matches)
     );

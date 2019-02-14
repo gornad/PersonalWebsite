@@ -1,22 +1,31 @@
-.vert {
-	display: flex;
-	flex-direction: column;
+.headers-align .mat-expansion-panel-header-title,
+.headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
 	padding: 4%;
-	margin-top:2%;
+}
+::ng-deep .mat-tab-label {
+	width: 50vw;
 }
 
-.hor{
-	display: flex;
-	flex-direction: row;
+h1, p {
+	line-height: 25px;
 }
-
 img {
-	margin-top: 7%;
-	width: 30%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
-	height: 30%;
+	padding: 0.5%;
+	width: 49%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+	height: 49%;
 	margin-left: auto;
 	margin-right: auto;
 	image-orientation: from-image;
+	cursor: pointer;
 }
 
 html {

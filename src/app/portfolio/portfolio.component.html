@@ -1,32 +1,165 @@
 <html>
-	<div class="vert">
-		<h1> Programming Portfolio</h1>
-		<h1></h1>
-		<h1></h1>
-		<body>
-			<p><b>My github contains projects from some of my classes in college, the sleep tracker app I worked on in HackPSU Spring 2018 and my website code (and my resume).</b></p>
+	<mat-tab-group backgroundColor="background" color="primary">
+		<mat-tab>
+			<ng-template mat-tab-label>
+					<strong>PROGRAMMING PORTFOLIO</strong>
+			</ng-template>
 			<h1></h1>
-			<p><a href="https://github.com/gornad" target="_blank">https://github.com/gornad</a></p>
 			<h1></h1>
-			<p>CMPEN 455: Image processing projects using MATLAB</p>
-			<p>CMPSC 473: Operating systems design projects using C/C++. Projects range from program performance diagnostics to multithreading using mutexes and semaphores</p>
-			<p>CMPSC 450: Projects on algorithm optimizations and parallelism using OpenMP and MPI</p>
-			<h1></h1>
-			<p><b>My devpost contains all hackathon projects I worked on throughout my college years</b></p>
-			<h1></h1>
-			<p><a href="https://devpost.com/gornad96" target="_blank">https://devpost.com/gornad96</a></p>
-			<h1></h1>
-		</body>
-		<h1></h1>
-		<h1></h1>
-		<h1></h1>
-		<h1></h1>
-		<h1></h1>
-		<h1> Game Design Portfolio</h1>
-		<h1></h1>
-		<h1></h1>
-		<body>
-			I will be uploading my game design work very soon! Hang in there.
-		</body>
-	</div>
+			<body>
+				<p><b>My github contains projects from some of my classes in college and other personal and competitive projects:</b></p>
+				<p><a href="https://github.com/gornad" target="_blank">https://github.com/gornad</a></p>
+				<p>Image processing projects using MATLAB.</p>
+				<p>Operating systems design projects using C/C++. Projects range from program performance diagnostics to multithreading using mutexes and semaphores.</p>
+				<p>Projects on algorithm optimizations and parallelism using OpenMP and MPI.</p>
+				<p>Embedded Systems FGPA project using Vivado HLS.</p>
+				<p><b>My devpost contains all hackathon projects I worked on throughout my college years:</b></p>
+				<p><a href="https://devpost.com/gornad96" target="_blank">https://devpost.com/gornad96</a></p>
+
+			</body>
+		</mat-tab>
+		<mat-tab>
+			<ng-template mat-tab-label>
+					<strong>GAME DEVELOPMENT PORTFOLIO</strong>
+			</ng-template>
+
+			<ng-template matTabContent>
+				<h1></h1>
+				<h1></h1>
+				<body>
+					<mat-accordion class="headers-align" multi="false">
+						<mat-expansion-panel>
+							<mat-expansion-panel-header>
+								<mat-panel-title>
+									<strong>Unreal Engine 4: DualRun Game</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Prototype
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p>This is my first UE4 project. My main objective for the project was to learn as much as possible about UE4 and to establish a viable prototype for a game concept.</p>
+								<p>The prototype contains wall-running and wall-climbing mechanics, 
+								a time-slow ability, a dash ability, a speed-up ability, "Zombie" AI, turret AI and a random player radius AI. 
+								The demo took approximately 2 months of research, learning, development and bug-fixing. 
+								The project was built purely with Blueprints. The assets used were from the starter content and Gideon character available for free on the UE4 marketplace. </p>
+								<p>You can try out the demo here: <a href="https://github.com/gornad/DualRun_Prototype" target="_blank">https://github.com/gornad/DualRun_Prototype</a>.</p>
+								<img src="assets/dualrun1.png" onclick="window.open('assets/dualrun1.png', '_blank');">
+								<img src="assets/dualrun2.png" onclick="window.open('assets/dualrun2.png', '_blank');">
+							</ng-template>
+						</mat-expansion-panel>
+						<mat-expansion-panel>
+							<mat-expansion-panel-header>
+								<mat-panel-title>
+									<strong>Dying Light: House of the Woods</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Map
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p>This map was created to showcase level design skills and includes some elements of horror and action.</p>
+								<p> The map took approximately 100 hours of research and work and is my first map using the Dying Light Developer Tools (Chrome Engine 6).</p>
+								<p>If you own Dying Light, feel free to check the maps out on the Dying Light Steam workshop.</p>
+								<img src="assets/dl1.png" onclick="window.open('assets/dl1.png', '_blank');">
+								<img src="assets/dl2.png" onclick="window.open('assets/dl2.png', '_blank');">	
+								<p><u><strong>Statistics:</strong></u></p>	
+								<p>This map performed incredibly well and 
+									its two versions are now two of the most popular mods ever made for Dying Light on the Steam Workshop. 
+									This map is getting more popular to this day.</p>
+								<img src="assets/dl3.png" onclick="window.open('assets/dl3.png', '_blank');">
+								<img src="assets/dl4.png" onclick="window.open('assets/dl4.png', '_blank');">	
+								<img src="assets/dl5.png" onclick="window.open('assets/dl5.png', '_blank');">
+								<img src="assets/dl6.png" onclick="window.open('assets/dl6.png', '_blank');">	
+								<p>All of these captures were taken on 02/10/2019.</p>
+							</ng-template>
+						</mat-expansion-panel>
+						<mat-expansion-panel>
+							<mat-expansion-panel-header>
+								<mat-panel-title>
+									<strong>Skyrim: Ezekiel's Burial</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Dungeon
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+							
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p>This dungeon was created using the Creation Kit (Based on Bethesda's Creation Engine). It was created mainly to practice with the Creation Kit and to showcase level design skills. It is my attempt to create a dungeon map with the same quality as those present in the vanilla game. It is my first mod for Skyrim.</p>
+								<p>The navmesh for this map was created from scratch as the automatic navmesh generation functionality was very inaccurate in my case.</p>
+								<p>If you have Skyrim: Special Edition, you can try out the mod from here: <a href="https://bethesda.net/en/mods/skyrim/mod-detail/4086894" target="_blank">https://bethesda.net/en/mods/skyrim/mod-detail/4086894</a>.</p>
+								<img src="assets/s1.png" onclick="window.open('assets/s1.png', '_blank');">
+								<img src="assets/s2.png" onclick="window.open('assets/s2.png', '_blank');">
+								<p><u><strong>Statistics:</strong></u></p>	
+								<p>This map performed well and was well-received. 
+									The map is still getting views and is being downloaded. 
+									I was very satisfied with the map, being my first project with the creation engine.</p>
+								<img src="assets/s3.png" onclick="window.open('assets/s3.png', '_blank');">
+								<p>The map also has 3 five-star ratings not visible in the screenshot.</p>
+								<p>This capture was taken on 02/11/2019.</p>
+							</ng-template>		
+						</mat-expansion-panel>
+						<mat-expansion-panel>
+							<mat-expansion-panel-header>
+								<mat-panel-title>
+									<strong>Doom: Survive Fear</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Map
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+							
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p>My goal was to create a compelling Doom map with elements of fear, action and revenge while showcasing level-design skills. It was my first map for Doom.</p>
+								<p>The map was made using Doom SnapMap</p>
+								<img src="assets/dsf1.png" onclick="window.open('assets/dsf1.png', '_blank');">
+								<img src="assets/dsf2.png" onclick="window.open('assets/dsf2.png', '_blank');">
+								<p><u><strong>Statistics:</strong></u></p>	
+								<p>The map was overall well-received. Being my first ever game-related project, I was very happy with it</p>
+								<img src="assets/dsf3.png" onclick="window.open('assets/dsf3.png', '_blank');">
+								<p>This capture was taken on 09/28/2018.</p>	
+							</ng-template>		
+						</mat-expansion-panel>
+						<mat-expansion-panel>
+							<mat-expansion-panel-header>
+								<mat-panel-title>
+									<strong>Doom: Roger Caillois Four Types of Play</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Educational Map
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+							
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p>My goal was to create a Doom map that showcases the 4 types of play elaborated on by French philosopher and thinker Roger Caillois.</p>
+								<img src="assets/drc1.png" onclick="window.open('assets/drc1.png', '_blank');">
+								<img src="assets/drc2.png" onclick="window.open('assets/drc2.png', '_blank');">
+								<p><u><strong>Statistics:</strong></u></p>	
+								<p>The map was relatively well-received although it was not popular. 
+									This might be due to the very “niche” aspect of the map and the time when the map was published.</p>
+								<img src="assets/drc3.png" onclick="window.open('assets/drc3.png', '_blank');">
+								<p>The map also has 3 five-star ratings not visible in the screenshot.</p>
+								<p>This capture was taken on 09/28/2018.</p>
+							</ng-template>		
+						</mat-expansion-panel>
+					</mat-accordion>
+					
+					<h1></h1>
+					<h1></h1>
+					<h1></h1>
+					<h1></h1>
+					<p><strong>Check out playthroughs of my projects on my Youtube channel: </strong><a href="https://www.youtube.com/channel/UC2KXM2U_P1hLommtIlxIWpg" target="_blank">GornadGaming</a>.</p>
+					<h1></h1>
+					<p><strong>Check out the design documents for these maps at: </strong> <a href="https://github.com/gornad/Game-Development-Documents" target="_blank">https://github.com/gornad/Game-Development-Documents</a>.</p>
+				</body>
+			</ng-template>
+		</mat-tab>
+	</mat-tab-group>
 </html>

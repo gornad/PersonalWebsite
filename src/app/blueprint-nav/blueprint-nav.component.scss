@@ -1,8 +1,8 @@
-.sidenav-container {
+mat-sidenav-container {
   height: 100%;
 }
 
-.sidenav {
+mat-sidenav {
   width: 290px;
 }
 
@@ -27,4 +27,16 @@ mat-toolbar-row {
 
 .spacer {
   flex: 1 1 auto;
+}
+
+a:link { 
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(160, 160, 160);
+}
+
+a:visited {
+  text-decoration: none;
 }

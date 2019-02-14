@@ -1,20 +1,23 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container>
   <mat-sidenav
     #drawer
-    class="sidenav"
     fixedInViewport="false"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]=false>
+
     <mat-toolbar color="primary">Menu</mat-toolbar>
+
     <mat-nav-list>
-	  <a (click)="drawer.toggle()" mat-list-item [routerLink]="['home']" routerLinkActive="active">HOME</a>
-	  <a (click)="drawer.toggle()" mat-list-item [routerLink]="['resume']" routerLinkActive="active">RESUME</a>
-	  <a (click)="drawer.toggle()" mat-list-item [routerLink]="['portfolio']" routerLinkActive="active">PORTFOLIO</a>
-	  <a (click)="drawer.toggle()" mat-list-item [routerLink]="['about']" routerLinkActive="active">ABOUT</a>
-	  <a (click)="drawer.toggle()" mat-list-item [routerLink]="['contact']" routerLinkActive="active">CONTACT</a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['home']" routerLinkActive="active">HOME</a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['resume']" routerLinkActive="active">RESUME</a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['portfolio']" routerLinkActive="active">PORTFOLIO</a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['about']" routerLinkActive="active">ABOUT</a>
+      <a (click)="drawer.toggle()" mat-list-item [routerLink]="['contact']" routerLinkActive="active">CONTACT</a>
     </mat-nav-list>
+
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button
@@ -34,6 +37,6 @@
 	  <a *ngIf="!(isHandset$ | async)" mat-button [routerLink]="['contact']" routerLinkActive="active">CONTACT</a>
     </mat-toolbar>
     <!-- Add Content Here -->
-	<ng-content></ng-content>
+	  <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
