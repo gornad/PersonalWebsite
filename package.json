@@ -46,6 +46,7 @@
     "popper.js": "^1.14.4",
     "punycode": "^2.1.1",
     "rxjs": "^6.3.3",
+    "rxjs-tslint": "^0.1.8",
     "schema-utils": "^1.0.0",
     "tslib": "^2.1.0",
     "uri-js": "^4.2.2",
