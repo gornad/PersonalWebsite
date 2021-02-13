@@ -2,6 +2,197 @@
 	<mat-tab-group mat-stretch-tabs backgroundColor="primary" color="accent" dynamicHeight="true">
 		<mat-tab>
 			<ng-template mat-tab-label>
+				UX DESIGN PORTFOLIO
+			</ng-template>
+
+			<ng-template matTabContent>
+				<h1></h1>
+				<h1></h1>
+				<body>
+					<mat-accordion class="headers-align" multi="false">
+						<mat-expansion-panel>
+							<mat-expansion-panel-header collapsedHeight="11vh">
+								<mat-panel-title>
+									<strong>Terminal Dashboard</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Work Project
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p>
+									The terminal dashboard was built to display the large number of statistics available on the VSAT (Satellite Modem) in an efficient, simple and pleasant manner.
+									It is built with modern tools: Angular 8 framework, Angular Material for the UI design and Chart JS for the graphs.
+									The dashboard allows the user to select any combination of stats and to add, remove and modify graphs.
+									It was designed with accessibility and responsiveness in mind. It can be used anywhere by almost anyone.
+								</p>
+								
+								<p><u><strong>Project Description:</strong></u></p>
+								<p>
+									The idea for a dashboard came about when it was communicated that customer service representatives and engineers were doing repetitive and time-consuming work to access
+									terminal statistics. The dashboard is meant to be a solution to this problem by providing users with an efficient way to grab the information they need quickly
+									and efficiently.
+								</p>
+								<p>
+									There were a few attempts at creating a dashboard with plain javascript but the attempts were in prototype stages and never evolved beyond that.
+									It is at that time that I joined Hughes and was tasked with creating a dashboard using Angular.
+								</p>
+
+								<p><u><strong>Project Research and Planning:</strong></u></p>
+								<p>
+									The project initially had very loose requirements and there was no clear vision as to what it should be. I met up with my manager 
+									and a few other senior developers at the company to get a clear idea of expectations and our current capabilities in terms of software and hardware.
+									I researched quite a bit about JavaScript frameworks and Angular as well as back-end technologies and methodologies in case our current back-end stat framework was not viable.
+									I also got into contact with developers that previously attempted this project and got a clear idea of the challenges they faced. The problems faced were mostly related to
+									interfacing our current back-end with JavaScript. Since I will be using Angular, many of the back-end and front-end interfacing challenges would be simplified.
+									After a week of research and discussion, the project architecture was clear and tasks were delineated.
+								</p>
+								<p> My priority at this point was to work quickly to create an MVP/prototype to iterate on. I participated in daily meetings to showcase progress. 
+									After a few months of hard-work and challenges, feedback from teammates and managers and a few demos, I was able to create a fully functioning dashboard that is now included in many terminals in the field
+								</p>
+
+								<p><u><strong>Challenges:</strong></u></p>
+								<p>
+									There were many challenges that I faced in this project. Most of them were technical and a few were design related. I will be talking about design challenges:
+								</p>
+								<p>	-	Deciding how many columns the dashboard should support. There was contention as to how big the grid columns should be.
+										Thanks to the power of Angular, I proposed the solution to simply include an option to change the layout of the grid. It would spawn a few technical challenges but
+										because of the importance of each column setting, it proved to be necessary. </p>
+								<p>	-	Designing a mobile experience for the dashboard. To resolve this, I went through a lot of testing of the interface. I had multiple teammates use the mobile version and make suggestions.
+										I also observed common inconveniences that they faced, such as scrolling the graph instead of the page, or having difficulty clicking graph buttons. 
+										I ended up adding scroll buttons and making all buttons bigger along with other changes. This improved the mobile experience tremendously.
+								</p>
+								<p>	-	Dragging and dropping graphs into graph slots. This proved to be a very difficult technical challenge. To resolve, I had to compromise on the design. The feature itself was not crucial
+										and after a discussion with my manager, it was decided that it would not be worth the time. I ended up implementing a free-flow drag and drop.
+								</p>
+								<p>	-	Supporting scroll-zooming, drag-zooming and panning on a live graph. This was a technically difficult challenge. At one point, I considered compromising the design. However, this 
+									functionality is essential in a dashboard that is all about graphs. It took some time but I ended up modifying the zoom plugin library to support this functionality. </p>
+
+								<p> Please note that the schemas and wireframing for this project were done on a whiteboard in our lab. I do not have pictures of these drawings to showcase.</p>	
+
+								<p><strong> In the next paragraphs, I talk about the capabilities and features of the dashboard.</strong></p>
+
+								<p><u><strong>Dashboard Layout:</strong></u></p>
+								<p>
+									The terminal dashboard is designed in a simplistic manner. It follows a conventional dashboard style with a toolbar, an expandable sidenav and plenty of space.
+									The menu button on the top left opens the sidenav and allows the user to add graphs and perform operations that impact all graphs. 
+									At the bottom of the sidenav, the user can switch between 1-column, 2-column and 3-column layouts. Graphs are aligned in a left to right fashion. 
+									Each graph is located inside a card. The cards were used to contain the graphs and provide external functionality to each graph.
+									At the top left of the card, the user can switch between different time spans.
+									At the top right of the card, the user can access graph-specific functionality. 
+									The positioning of the buttons were inspired by Material Design conventions.
+									Adding and editing graphs opens dialogs that hover over the screen. 
+								</p>
+
+								<p><u><strong>Accessibility and Mobility:</strong></u></p>
+								<p>The entirety of the dashboard can be used with just a keyboard. It abides by a number of accessibility standards. It is also built to support all kinds of displays.</p>
+								<p>	There are some differences between the big display version and small display version:</p>
+								<p>	-	The graph timespan options change from buttons to a menu to abide by size limits</p>
+								<p>	-	There are up and down arrows on the right side of the display to help the user scroll up and down the dashboard for the smaller displays</p>
+								<p>	-	The colored rectangles in graph legends turn into circles on smaller screens so that the graph legend would format correctly</p>
+								<p>	-	Only one column layout is available for smaller screens as multiple columns do not work well on such devices</p>
+
+								<img src="assets/terminaldashboard1.png" onclick="window.open('assets/terminaldashboard1.png', '_blank');">
+								<img class="longimg" src="assets/terminaldashboard2.png" onclick="window.open('assets/terminaldashboard2.png', '_blank');">
+
+								<p><u><strong>Adding and Editing Graphs:</strong></u></p>
+								<p>
+									The user can add graphs by pressing the ADD GRAPH button in the menu. There were other ideas on how to add graphs such as having a big gray area with a + symbol in the dashboard but the current implementation proved to be efficient enough.
+									The user can edit graphs by pressing the button shaped like a pen located at the top right of every single graph. 
+									Adding or editing graphs opens a dialog that allows the user to select the specific stats that should be displayed.
+									The dialog design resembles common selection lists and forms that the user should be familiar with.
+									The selection list employs an advanced search algorithm that allows out-of-order search. This makes searching much easier in case the user only remembers a small part of his selection.
+									When adding/editing graphs with stats that have multiple units, stats are grouped up according to their unit and a graph is created for each one of those different units.
+								</p>
+
+								<img src="assets/terminaldashboard3.png" onclick="window.open('assets/terminaldashboard3.png', '_blank');">
+								<img src="assets/terminaldashboard4.png" onclick="window.open('assets/terminaldashboard4.png', '_blank');">
+
+								<p><u><strong>Bulk Graph Operations:</strong></u></p>
+								<p>
+									All of the following operations are common graph operations and allow the user to quickly interact with all available graphs.
+									In the menu, the user can quickly delete all graphs. 
+									The user can also, refresh all graphs to return them to their default state. The user can also reset graph positions to their original positions. 
+									The HELP button informs the user of all available shortcuts that can simplify dashboard usage. 
+									When finished with a session, the user can press the save graphs to cache button to save graph configurations for the next session. 
+									The cache is browser and machine specific. The dashboard can now be closed. The next time the dashboard opens, the same graphs will be shown. 
+									Note that saving to cache overwrites already present graphs in the cache. The user also has the option to clear the cache. 
+								</p>
+								<p>Available keyboard shortcuts are:</p>
+								<p>	-	+/Insert to add a graph</p>
+								<p>	-	Delete to delete all graphs</p>
+								<p>	-	Home to open the menu</p>
+								<p>	-	End to refresh all graphs</p>
+								<p><u><strong>Individual Graph Operations:</strong></u></p>
+								<p>
+									The user can select between Live 10 Min, which shows live data up to the past 10 minutes, and Live 30 Min, which shows live data up to the past 30 Min (Note that this option can severely impact application performance, especially for a large # of stats). 
+									The user can also see historical (non-live) data for the past hour, day and 14 days. 
+									These timespans were chosen after lengthy discussions with my manager and upper-management.
+									Using the arrow-cross button, the user can move graphs around to their liking. This feature was implemented to assist the user in organizing the graphs to the user's liking.
+									The pen button allows the user to edit the graph. Note that selecting stats with different units would create a graph for each unit. Please see Adding and Editing graphs section for more information.
+									The menu option allows users to reset/refresh and remove the graph. 
+									The user can also show and hide all stats or selectively choose which stat to show and hide by pressing on the stat legend in the graph itself.
+									The graphs are equipped with scroll-zoom, drag-zoom and panning functionality. Use the left-mouse button to pan and right-mouse button to drag-zoom. Use the mouse wheel to scroll-zoom.
+								</p>
+								<img src="assets/terminaldashboard5.png" onclick="window.open('assets/terminaldashboard5.png', '_blank');">
+							</ng-template>
+						</mat-expansion-panel>
+						<mat-expansion-panel>
+							<mat-expansion-panel-header collapsedHeight="11vh">
+								<mat-panel-title>
+									<strong>Nutshell</strong>
+								</mat-panel-title>
+								<mat-panel-description>
+								Class/Personal Project
+								</mat-panel-description>
+							</mat-expansion-panel-header>
+
+							<ng-template matExpansionPanelContent>
+								<p><u><strong>Project Overview:</strong></u></p>
+								<p> This was an evolving project during my undergraduate years. The main app idea was examined at a hackathon and in an entrepreneurship class. There were many changes and prototypes over time.</p>
+								<p>	Nutshell helps students locate relevant, up to date, and interesting events going on around campus from  
+									concerts to  a casual sports game to a LAN gaming event to a study group. 
+									Our goal is to foster a strong community of college students who want to have fun and get together through local events that interest them. 
+									The base idea is that we allow users to filter events happening around campus. They can see in-depth information about each event and its organizer. 
+									The user then simply adds to his list some of the events he is interested in. 
+									We have performed extensive research around our customers and the app has gathered a very positive response. 
+									Our main app idea also came in 3rd place for the EdTech challenge in HackPSU Spring 2017 and we have made many changes to the app since then. 
+									The biggest change was to scrap the point system that rewarded students, event organizers and retailers as we found that there wasn't enough support on the retail side.
+									We studied the market and our app is very different from its competitors.
+									Our competitors focus on ticket sales and the events themselves whereas we focus on fostering a community of students specific to each campus 
+									and want to create a more personal experience.
+								</p>
+								<img class="centerimg" src="assets/nutshell1pager.png" onclick="window.open('assets/nutshell1pager.png', '_blank');">
+								<p><strong><u>Personas:</u></strong></p>
+								<img src="assets/persona1.png" onclick="window.open('assets/persona1.png', '_blank');">
+								<img src="assets/persona2.png" onclick="window.open('assets/persona2.png', '_blank');">	
+								<p><strong>The following document goes into the details of the project (MVC,surveys,Persona,Business Plan, etc.)</strong></p>
+								<div class="vert">
+									<pdf-viewer 
+									[src]="'assets/Nutshell_FinalReport.pdf'"
+									[show-all]="true" 
+									style="display: block;">
+									</pdf-viewer>
+								
+									<p align="center"><b>CLICK ON LINK TO DOWNLOAD PDF: </b><a href="https://github.com/gornad/Documents/raw/main/Nutshell_FinalReport.pdf" target="_blank">
+								https://github.com/gornad/Documents/raw/main/Nutshell_FinalReport.pdf</a></p>
+								</div>
+							</ng-template>
+						</mat-expansion-panel>
+					</mat-accordion>
+					
+					<h1></h1>
+					<h1></h1>
+					<h1></h1>
+					<h1></h1>
+					<p><strong>Feel free to checkout my other portfolios!</strong>
+				</body>
+			</ng-template>
+		</mat-tab>
+		<mat-tab>
+			<ng-template mat-tab-label>
 				PROGRAMMING PORTFOLIO
 			</ng-template>
 			<h1></h1>
