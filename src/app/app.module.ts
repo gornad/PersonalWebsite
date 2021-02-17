@@ -19,13 +19,14 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
-import { OwlModule } from 'ngx-owl-carousel';
 import { BlueprintNavComponent } from './blueprint-nav/blueprint-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -44,14 +45,14 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    OwlModule,
     LayoutModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     PdfViewerModule,
     MatExpansionModule, 
-    MatTabsModule
+    MatTabsModule,
+    MatCarouselModule.forRoot(),
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

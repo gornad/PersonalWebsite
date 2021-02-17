@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {
-	  	this.imagesurl = ['assets/1.jpg','assets/2.jpg','assets/3.jpg','assets/5.jpg'];
+	  	this.imagesurl = ['assets/1.jpg','assets/2.jpg','assets/3.jpg','assets/4.jpg'];
   }
 
 }
