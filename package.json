@@ -38,7 +38,7 @@
     "jquery": "^3.5.1",
     "json-schema-traverse": "^0.4.1",
     "json5": "^2.0.1",
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^1.4.2",
     "material-design-icons": "^3.0.1",
     "minimist": "^1.2.5",
     "ng2-pdf-viewer": "^6.3.2",
